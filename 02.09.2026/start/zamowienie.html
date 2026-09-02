@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Twoje imię i nazwisko" />
+    <title>Oblicz cenę — Lodziarnia</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <script src="js/main.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <main>
+        <h2>Oblicz cenę</h2>
+        <form>
+          <label for="smak">Smak: </label>
+          <select id="smak">
+            <option value="5">Truskakowy 5 zł</option>
+            <option value="4">Waniliowy 4 zł</option>
+            <option value="6">Czekoladowy 6 zł</option>
+          </select>
+          <br />
+          <label
+            >Ilość: <input type="number" id="ilosc" min="1" max="5" value="1"
+          /></label>
+          <br />
+          <input type="button" value="Oblicz" id="oblicz" />
+        </form>
+        <p>Do zapłaty: <span id="wynik"></span>zł</p>
+      </main>
+
+      <header>
+        <p><em>Szkielet — menu, Zamówienie z klasą active</em></p>
+      </header>
+      <main>
+        <p>Formularz: #smak, #ilosc, #oblicz, wynik w #wynik</p>
+      </main>
+      <aside>
+        <p>Cennik smaków</p>
+      </aside>
+      <footer>
+        <p>Imię, nazwisko, klasa</p>
+      </footer>
+    </div>
+  </body>
+</html>

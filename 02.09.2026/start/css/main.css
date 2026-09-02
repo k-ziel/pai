@@ -1,0 +1,48 @@
+/* Lodziarnia Letnia — uzupełnij style według zadanie.txt (menu, .active, :hover) */
+
+html {
+  font-family: sans-serif;
+}
+
+:root {
+  --k1: hsl(330, 50%, 35%);
+  --k2: hsl(200, 60%, 95%);
+  --k3: hsl(45, 90%, 45%);
+}
+
+.container {
+  max-width: 900px;
+  background-color: gray;
+}
+
+.gora {
+  display: flex;
+}
+header {
+  height: 90px;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  border-bottom: 1px solid var(--k1);
+  flex: 1;
+}
+
+nav {
+  flex: 1;
+}
+
+a {
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+li {
+  list-style: none;
+  padding: 1rem;
+  background-color: var(--k2);
+  border-radius: 12px;
+  margin: 2px;
+}
+
+ul {
+  display: flex;
+}
