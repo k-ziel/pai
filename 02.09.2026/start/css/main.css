@@ -1,7 +1,7 @@
 /* Lodziarnia Letnia — uzupełnij style według zadanie.txt (menu, .active, :hover) */
 
 html {
-  font-family: sans-serif;
+  font-family: "Comic Sans MS";
 }
 
 :root {
@@ -11,38 +11,119 @@ html {
 }
 
 .container {
-  max-width: 900px;
-  background-color: gray;
+  max-width: 500px;
+  margin: auto;
 }
 
-.gora {
-  display: flex;
+.container {
+  max-width: 900px;
+  /* background-color: gray; */
 }
+
+h1 {
+  font-weight: bolder;
+  color: var(--k1);
+}
+
 header {
   height: 90px;
-  margin-top: 1em;
-  margin-bottom: 1em;
   border-bottom: 1px solid var(--k1);
-  flex: 1;
+  display: flex;
+  justify-content: space-between;
 }
 
-nav {
-  flex: 1;
-}
-
-a {
+nav a {
   text-decoration: none;
-  margin-right: 10px;
-}
-
-li {
-  list-style: none;
   padding: 1rem;
+
+  color: var(--k1);
   background-color: var(--k2);
   border-radius: 12px;
-  margin: 2px;
 }
 
-ul {
+nav .active {
+  color: var(--k2);
+  background-color: var(--k1);
+  border-radius: 12px;
+}
+
+nav li {
+  list-style: none;
+  padding: 1rem 0;
+  margin: 6px;
+}
+
+nav a:hover {
+  background-color: var(--k1);
+  color: var(--k2);
+}
+
+nav ul {
   display: flex;
+}
+
+.srodek {
+  display: flex;
+}
+
+main,
+aside {
+  background-color: var(--k2);
+  border-radius: 12px;
+  /* flex: 1; */
+  padding: 1rem;
+  margin: 1rem 0rem;
+  box-shadow: 0px 0px 5px var(--k1);
+  color: var(--k1);
+}
+
+main {
+  margin-right: 1rem;
+  width: 70%;
+}
+
+aside {
+  width: 30%;
+  margin-left: 1rem;
+}
+
+.srodek h2,
+h3 {
+  text-align: center;
+  color: var(--k1);
+}
+
+footer {
+  border-top: 1px solid var(--k1);
+  text-align: center;
+  color: var(--k1);
+}
+
+footer span {
+  font-weight: bolder;
+  color: var(--k3);
+}
+
+.zdjecie {
+  display: flex;
+  justify-content: center;
+}
+
+main p {
+  text-align: right;
+}
+
+#oblicz {
+  background-color: var(--k1);
+  padding: 0.5rem;
+  border: none;
+  border-radius: 12px;
+  color: var(--k2);
+  margin-top: 1rem;
+}
+
+#wynik {
+  font-size: x-large;
+  font-weight: bolder;
+  color: var(--k3);
 }
