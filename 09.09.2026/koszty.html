@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Montaż paneli podłogowych</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <img src="montaz_paneli.png" alt="firma usługowa" />
+      </header>
+      <nav>
+          <a href="index.html">Strona Główna</a></li>
+          <a href="oferta.html">Oferta</a></li>
+          <a href="koszty.html">Kalkulator kosztów</a></li>
+      </nav>
+      <main>
+        <h1>Kalkulator kosztów montażu</h1>
+
+          <label>Szerokość pomieszczenia [m]: 
+          <input type="number" id="szerokosc" /> </label>
+          <label>Długość pomieszczenia [m] 
+          <input type="number" id="dlugosc" /> </label>
+
+          <p>Typ panelu</p>
+          <label
+            ><input type="radio" id="laminowane" name="typ_panelu" />Panele
+            laminowane</label
+          >
+          <br />
+          <label
+            ><input type="radio" id="winylowe" name="typ_panelu" />Panele
+            winylowe</label
+          >
+          <br />
+          <label
+            ><input type="radio" id="deska" name="typ_panelu" />Deska
+            podłogowa</label
+          >
+          <br />
+
+          <input type="submit" value="Oblicz"  id="oblicz" />
+
+          <p id="wynik">
+          </p>
+      </main>
+      <footer>
+        <h5>Autor strony: Kacper Zieliński</h5>
+      </footer>
+    </div>
+  </body>
+    <script>
+        oblicz_przycisk = document.querySelector("#oblicz")
+        wynik_tekst = document.querySelector("#wynik")
+        
+        oblicz_przycisk.addEventListener("click", function() {
+            szerokosc_wartosc = document.querySelector("#szerokosc").value
+            dlugosc_wartosc = document.querySelector("#dlugosc").value
+            if(szerokosc_wartosc == '' || dlugosc_wartosc == '')
+        })
+
+
+    </script>
+</html>

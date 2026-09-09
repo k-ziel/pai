@@ -1,0 +1,55 @@
+* {
+  font-family: "Georgia";
+}
+
+body {
+  text-align: center;
+}
+
+header {
+  padding: 30px;
+  background-image: linear-gradient(to top, #f5deb3, #a0522d);
+}
+
+nav {
+  background-color: wheat;
+  padding: 14px;
+}
+
+main {
+  background-color: wheat;
+  padding: 50px;
+}
+
+footer {
+  background-image: linear-gradient(to bottom, #f5deb3, #a0522d);
+  padding: 30px;
+}
+
+a {
+  background-color: sienna;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 10px;
+  margin: 20px;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+table,
+td {
+  border: solid 1px sienna;
+  border-collapse: collapse;
+}
+
+table {
+  width: 70%;
+  margin: auto;
+}
+
+td {
+  padding: 5px;
+}
