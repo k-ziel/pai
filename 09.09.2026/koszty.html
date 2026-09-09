@@ -58,7 +58,28 @@
         oblicz_przycisk.addEventListener("click", function() {
             szerokosc_wartosc = document.querySelector("#szerokosc").value
             dlugosc_wartosc = document.querySelector("#dlugosc").value
-            if(szerokosc_wartosc == '' || dlugosc_wartosc == '')
+
+            czy_jest_laminowane = document.querySelector("#laminowane").checked
+            czy_jest_winylowe = document.querySelector("#winylowe").checked
+            czy_jest_deska = document.querySelector("#deska").checked
+            
+            if(czy_jest_laminowane) {
+              koszt_panelu = 12
+            } else if (czy_jest_winylowe) {
+              koszt_panelu = 14
+            } else if (czy_jest_deska) {
+              koszt_panelu = 18
+            } else {
+              wynik_tekst.innerHTML = "Wprowadź poprawne dane."
+            }
+
+            if(szerokosc_wartosc == '' || dlugosc_wartosc == '') {
+              wynik_tekst.innerHTML = "Wprowadź poprawne dane."
+            } else {
+              pole_powierzchni_pomieszczenia = szerokosc_wartosc * dlugosc_wartosc
+              koszt_montazu = koszt_panelu * pole_powierzchni_pomieszczenia
+              wynik_tekst.innerHTML = "Pole powierzchni pomieszczenia: " + pole_powierzchni_pomieszczenia + ", koszt montażu " + koszt_montazu
+            }
         })
 
 
