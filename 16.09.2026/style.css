@@ -1,0 +1,84 @@
+body {
+  background-color: rgb(241, 250, 238);
+  color: rgb(27, 67, 50);
+  font-style: Arial;
+  /* interpolate-size: 1,5; */
+  font-family: "arial";
+  margin: 0;
+}
+header {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  background-color: rgb(27, 67, 50);
+  color: white;
+}
+footer {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  background-color: rgb(27, 67, 50);
+  color: white;
+}
+nav {
+  background-color: rgb(27, 67, 50);
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  padding: 10px;
+  gap: 16px;
+}
+.Wyroby {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+.Wyroby2 {
+  border: 3px solid rgb(27, 67, 50);
+  border-radius: 8px;
+  padding: 12px;
+  box-sizing: border-box;
+  flex-direction: row;
+}
+table {
+  border-collapse: collapse;
+  width: 480px;
+  max-width: 100%;
+}
+tr,
+td {
+  border: 3px solid rgb(27, 67, 50);
+}
+a {
+  text-decoration: none;
+  color: #95d5b2;
+}
+.srodek {
+  margin: 2rem auto;
+  max-width: 700px;
+}
+
+.zapis {
+  border: dashed, 2px, rgb(27, 67, 50);
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+td {
+  padding: 0.5rem;
+}
+
+th {
+  background-color: rgb(27, 67, 50);
+  color: white;
+  padding: 0.5rem;
+}
+
+.cena {
+  font-weight: bolder;
+}
+
+.price {
+  margin-left: 2rem;
+}

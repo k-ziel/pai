@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glina - atelier</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+    <h1>Atelier Glina</h1>
+    </header>
+    
+        <nav>
+        <a href="#wyroby">Wyroby</a>
+        <a href="#cennik">Cennik</a>
+        <a href="#zapis">Zapis</a>
+        </nav>
+    <div class="srodek">
+        <main>
+        <h2>Uslugi</h2>
+        <p>Kubek</p>
+        <span class="price">od 45zł</span>
+        <p>Miska</p>
+        <span class="price">od 70zł</span>
+        <p>Wazon</p>
+        <span class="price">od 90zł</span>
+        <h2>Wyroby</h2>
+        <div class="Wyroby">
+            <div class="Wyroby2">
+            <img src="https://picsum.photos/400/260?random=1" alt="">
+            <p><h3>Kubek kamionkowy</h3></p>
+            Kubek toczony ręcznie, szkliwiony.<br>
+            </div>
+            <div class="Wyroby2">
+            <img src="https://picsum.photos/400/260?random=2" alt="">
+            <p><h3>Miska na owoce</h3></p>
+            Szeroka miska stołowa<br>
+            </div>
+            <div class="Wyroby2">
+            <img src="https://picsum.photos/400/260?random=3" alt="">
+            <p><h3>Wazon wysoki</h3></p>
+            Wazon na kwiaty cięte.<br>
+            </div>
+    </div>
+        <h2>Cennik</h2>
+        <table>
+            <tr>
+                <th>Wyrób</th>
+                <th>Wypał</th>
+                <th>Cena</th>
+            </tr>
+            <tr>
+                <td>Kubek</td>
+                <td>2 dni</td>
+                <td class="cena">45 zł</td>
+            </tr>
+            <tr>
+                <td>Miska</td>
+                <td>3 dni</td>
+                <td class="cena">70 zł</td>
+            </tr>
+            <tr>
+                <td>Wazon</td>
+                <td>4 dni</td>
+                <td class="cena">90zł</td>
+            </tr>
+        </table>
+        <h2>Zapis na wypał</h2>
+        <div class="zapis">
+            <form>
+                <p><label>Imię <input type="text" id="imie"></label></p>
+                <p><label>E-mail <input type="text" id="email"></label></p>
+                <p><Select>
+                    <option>Miska</option>
+                    <option>Kubek</option>
+                    <option>Wazon</option>
+                </Select></p>
+                <p><input type="button" value="Zapisz się na wypał" id="zapisz"></p>
+                <span id="tekst"></span>
+
+                <script>
+                    zapisz = document.querySelector("#zapisz")
+                    zapisz.addEventListener("click", function() {
+                        imie = document.querySelector("#imie")
+                        email = document.querySelector("#email")
+                        tekst = document.querySelector("#tekst")
+                        opcje = document.querySelectorAll("option")
+
+                        opcje.forEach(element => {
+                            if(opcje.selected) {
+                            }
+                            console.log("ser")
+                        });
+
+
+                        tekst.innerText = imie.value + " (" + email.value + ") zapisał/a się na wypał"
+                    })
+                </script>
+
+            </form>
+        </div>
+    
+        </main>
+    </div>
+    <footer>
+        <h3>Jan Kowalski 3ti</h3>
+    </footer>
+    
+
+
+</body>
+</html>
