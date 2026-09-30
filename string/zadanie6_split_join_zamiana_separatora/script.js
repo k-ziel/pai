@@ -1,0 +1,1 @@
+document.getElementById("wynik").textContent = prompt("Wpisz slowo").split("-").join(", ");
