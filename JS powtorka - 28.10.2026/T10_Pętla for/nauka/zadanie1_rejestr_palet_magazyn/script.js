@@ -6,10 +6,13 @@ const LICZBA_PALET = 6;
 // TODO: KROK 1 — Utwórz pętlę for odliczającą od 1 do LICZBA_PALET włącznie (krok: +1).
 // Pamiętaj o użyciu słowa kluczowego let dla zmiennej sterującej nrPalety.
 
-for (let nrPalety = 0; nrPalety < array.length; nrPalety++) {
-    const element = array[nrPalety];
-    
+for (let nrPalety = 0; nrPalety <= LICZBA_PALET; nrPalety++) {
+    zarejestrowano_tekst = `<p>Etykieta logistyczna dla palety towarowej nr ${nrPalety} — Status: Zarejestrowano w doku załadunkowym</p>`
+    document.write(zarejestrowano_tekst)
 }
+
+podsumowanie_tekst = `<p><strong>Wszystkie palety zostały pomyślnie wprowadzone do systemu magazynowego.</strong></p>`
+document.write(podsumowanie_tekst)
 
 // TODO: KROK 2 — Wewnątrz pętli wypisz komunikat za pomocą document.write():
 // `<p>Etykieta logistyczna dla palety towarowej nr ${nrPalety} — Status: Zarejestrowano w doku załadunkowym</p>`
