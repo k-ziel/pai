@@ -5,7 +5,26 @@ const LICZBA_BILETOW = Number(prompt("Podaj liczbę rezerwowanych biletów teatr
 const CENA_STANDARDOWA = 45;
 const CENA_RABATOWA = 35;
 
+let koszt;
+
 // TODO: KROK 1 — Zadeklaruj zmienną lacznyKosztZamowienia i przypisz jej wartość 0.
+
+let lacznyKosztZamowienia = 0;
+
+for (let bilet = 1; bilet <= LICZBA_BILETOW; bilet++) {
+    if(bilet <= 3) {
+        koszt = CENA_STANDARDOWA
+        document.write(`<p>Bilet na spektakl wieczorny nr ${bilet} — Cena standardowa: 45 zł — Aktualny stan rachunku: ${lacznyKosztZamowienia} zł</p>`)
+    } else {
+        koszt = CENA_RABATOWA
+        document.write(`<p>Bilet na spektakl wieczorny nr ${bilet} — Cena z rabatem grupowym: 35 zł — Aktualny stan rachunku: ${lacznyKosztZamowienia} zł</p>`)
+    }
+    lacznyKosztZamowienia+=koszt
+
+
+}
+
+document.write(`<p><strong>Całkowity koszt rezerwacji biletów teatralnych wynosi: ${lacznyKosztZamowienia} zł</strong></p>`)
 
 // TODO: KROK 2 — Skonstruuj pętlę for ze zmienną bilet od 1 do LICZBA_BILETOW (krok: +1).
 

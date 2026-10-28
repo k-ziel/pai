@@ -5,6 +5,20 @@ const LICZBA_DNI_TYGODNIA = 7;
 
 // TODO: KROK 1 — Zadeklaruj zmienną licznikDostawRzemieslniczych i przypisz jej wartość początkową 0.
 
+let licznikDostawRzemieslniczych = 0
+
+for (let dzien = 1; dzien <= LICZBA_DNI_TYGODNIA; dzien++) {
+    if(dzien%2 === 0) {
+        document.write(`<p>Harmonogram kawiarni — Dzień nr ${dzien} — Dostawa z palarni rzemieślniczej (ziarna Speciality)</p>`)
+        licznikDostawRzemieslniczych++
+    } else {
+        document.write(`<p>Harmonogram kawiarni — Dzień nr ${dzien} — Dostawa standardowa (ziarna klasyczne)</p>`)
+    }
+    
+}
+
+document.write(`<p><strong>Łączna liczba dostaw ziaren Speciality w tygodniu wynosi: ${licznikDostawRzemieslniczych}</strong></p>`)
+
 // TODO: KROK 2 — Utwórz pętlę for ze zmienną sterującą dzien od 1 do LICZBA_DNI_TYGODNIA (krok: +1).
 
 // TODO: KROK 3 — Wewnątrz pętli sprawdź warunek: czy dzień jest parzysty (dzien % 2 === 0).
