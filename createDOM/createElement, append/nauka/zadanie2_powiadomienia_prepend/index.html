@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trans-Sped — Centrum Dyspozytorskie</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="aplikacja">
+    <header>
+      <h1>Trans-Sped — Dyspozytornia Logistyczna</h1>
+    </header>
+
+    <main>
+      <section class="panel-nadawania">
+        <h2>Nadawanie alertu operacyjnego</h2>
+        <div class="grupa-formularza">
+          <label for="tresc-alertu">Treść komunikatu drogowego:</label>
+          <input type="text" id="tresc-alertu" placeholder="Wpisz treść zdarzenia drogowego...">
+        </div>
+        <button type="button" id="btn-wyslij-alert" class="btn-alert">Wyślij alert dyspozytorski</button>
+      </section>
+
+      <section class="panel-strumienia">
+        <h2>Oś czasu alertów operacyjnych (najnowsze u góry)</h2>
+        <div id="panel-alertow" class="strumien-alertow">
+          <div class="karta-alertu" data-kod="ALERT-1010">
+            <span class="etykieta-priorytet">PILNE</span>
+            <p>Odprawa celna w terminalu wschodnim opóźniona o 35 minut.</p>
+          </div>
+          <div class="karta-alertu" data-kod="ALERT-1008">
+            <span class="etykieta-priorytet">PILNE</span>
+            <p>Ciągnik siodłowy #402 zakończył załadunek w magazynie centralnym.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>INF.03 · PAI · XXI c.</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

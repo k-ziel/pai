@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Office-Projekt — Wyposażenie Przestrzeni Biurowych</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="aplikacja">
+    <header>
+      <h1>Office-Projekt — Konfigurator Kart Ofertowych</h1>
+    </header>
+
+    <main>
+      <section class="panel-konfiguracji">
+        <h2>Wprowadź nową ofertę wyposażenia</h2>
+        <div class="grupa-pola">
+          <label for="nazwa-oferty">Nazwa produktu / pakietu:</label>
+          <input type="text" id="nazwa-oferty" placeholder="np. Fotel ergonomiczny...">
+        </div>
+        <div class="grupa-pola">
+          <label for="opis-oferty">Specyfikacja techniczna:</label>
+          <input type="text" id="opis-oferty" placeholder="np. Regulacja podłokietników...">
+        </div>
+        <button type="button" id="btn-dodaj-oferte" class="btn-glowny">Dodaj ofertę do katalogu</button>
+      </section>
+
+      <section class="panel-katalogu">
+        <h2>Aktualny katalog ofert</h2>
+        <div id="katalog-ofert" class="siatka-kart">
+          <article class="karta-oferty">
+            <h3 style="color: #38bdf8;">Stanowisko akustyczne Focus-Pod</h3>
+            <p>Tapicerka wygłuszająca, zintegrowane oświetlenie LED i zasilanie 230V.</p>
+            <span class="cena-oferty">Cena: 4 500 PLN</span>
+            <button type="button" class="btn-wybierz">Wybierz ofertę</button>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>INF.03 · PAI · XXI c.</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

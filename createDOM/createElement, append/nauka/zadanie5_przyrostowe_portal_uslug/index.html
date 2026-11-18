@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portal Usługowo-Handlowy IT-Partner</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="portal-kontener">
+    <header>
+      <h1>Portal Usługowo-Handlowy IT-Partner — Kosztorys Zleceń</h1>
+    </header>
+
+    <main>
+      <section class="karta-modulu">
+        <h2>Dodawanie pozycji kosztorysowej</h2>
+        <div class="siatka-formularza">
+          <div class="grupa-pola">
+            <label for="nazwa-uslugi">Nazwa usługi IT:</label>
+            <input type="text" id="nazwa-uslugi" placeholder="Wpisz nazwę usługi...">
+          </div>
+          <div class="grupa-pola">
+            <label for="koszt-uslugi">Koszt netto (PLN):</label>
+            <input type="number" id="koszt-uslugi" placeholder="np. 1450" min="0" step="50">
+          </div>
+        </div>
+        <div class="przyciski-akcji">
+          <button type="button" id="btn-dodaj-pozycje" class="btn-primary">Dodaj pozycję do kosztorysu</button>
+          <button type="button" id="btn-pakiet-startowy" class="btn-secondary">Wczytaj pakiet startowy IT-Partner</button>
+        </div>
+      </section>
+
+      <section class="karta-modulu">
+        <h2>Zestawienie wybranych usług IT</h2>
+        <ul id="lista-uslug" class="lista-kosztorysu">
+          <li class="pozycja-uslugi" data-koszt="850">
+            <span class="nazwa">Audyt konfiguracji zapory sieciowej UTM</span>
+            <span class="koszt-wartosc">Koszt: 850.00 PLN</span>
+          </li>
+        </ul>
+
+        <div class="panel-podsumowania">
+          <p id="podsumowanie">Łączny koszt wybranych usług: 850.00 PLN</p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>INF.03 · PAI · XXI c.</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

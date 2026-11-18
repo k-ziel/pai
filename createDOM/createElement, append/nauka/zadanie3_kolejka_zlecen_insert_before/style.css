@@ -1,0 +1,144 @@
+/* Dark Theme - Serwis Urządzeń Biurowych Print-Service */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #0b0f19;
+  color: #f8fafc;
+  line-height: 1.6;
+  padding: 2rem 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.aplikacja {
+  width: 100%;
+  max-width: 650px;
+  background-color: #0f172a;
+  border: 1px solid #334155;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+header {
+  border-bottom: 2px solid #1e293b;
+  padding-bottom: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+header h1 {
+  font-size: 1.4rem;
+  color: #38bdf8;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.panel-formularza, .panel-kolejki {
+  background-color: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 8px;
+  padding: 1.25rem;
+}
+
+h2 {
+  font-size: 1.1rem;
+  color: #94a3b8;
+  margin-bottom: 1rem;
+}
+
+.grupa-formularza {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+label {
+  font-size: 0.9rem;
+  color: #cbd5e1;
+}
+
+input[type="text"] {
+  background-color: #0f172a;
+  border: 1px solid #475569;
+  border-radius: 6px;
+  padding: 0.6rem 0.8rem;
+  color: #f8fafc;
+  font-size: 0.95rem;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  border-color: #eab308;
+  box-shadow: 0 0 0 3px rgba(234, 179, 8, 0.2);
+}
+
+.btn-ekspres {
+  background-color: #ca8a04;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.7rem 1.2rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-ekspres:hover {
+  background-color: #a16207;
+}
+
+.kolejka-lista {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.kolejka-lista li {
+  padding: 0.7rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.2s;
+  font-size: 0.95rem;
+}
+
+.zlecenie-standard {
+  background-color: #0f172a;
+  border-left: 4px solid #64748b;
+  color: #cbd5e1;
+}
+
+.zlecenie-ekspres {
+  background-color: #172554;
+  border-left: 4px solid #eab308;
+  color: #fef08a;
+}
+
+.kolejka-lista li.zrealizowane {
+  background-color: #064e3b;
+  border-left: 4px solid #10b981;
+  color: #a7f3d0;
+  text-decoration: line-through;
+  opacity: 0.8;
+}
+
+footer {
+  margin-top: 2rem;
+  border-top: 1px solid #1e293b;
+  padding-top: 1rem;
+  text-align: center;
+  color: #64748b;
+  font-size: 0.85rem;
+}

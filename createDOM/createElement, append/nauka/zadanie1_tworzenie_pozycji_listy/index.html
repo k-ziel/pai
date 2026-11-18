@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Volt-Hurt — Magazyn Podzespołów</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="aplikacja">
+    <header>
+      <h1>Volt-Hurt — Przyjęcie Towaru do Magazynu</h1>
+    </header>
+
+    <main>
+      <section class="panel-formularza">
+        <h2>Nowa pozycja asortymentowa</h2>
+        <div class="grupa-formularza">
+          <label for="nazwa-towaru">Nazwa towaru lub podzespołu:</label>
+          <input type="text" id="nazwa-towaru" placeholder="Wpisz nazwę podzespołu...">
+        </div>
+        <button type="button" id="btn-dodaj" class="btn-akcja">Dodaj do spisu</button>
+      </section>
+
+      <section class="panel-listy">
+        <h2>Aktualny stan magazynowy</h2>
+        <ul id="lista-towarow" class="lista-zasobow">
+          <li class="pozycja-towaru">Wyłącznik nadprądowy B16 1P</li>
+          <li class="pozycja-towaru">Rozdzielnica modułowa 2x12 natynkowa</li>
+        </ul>
+      </section>
+    </main>
+
+    <footer>
+      <p>INF.03 · PAI · XXI c.</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

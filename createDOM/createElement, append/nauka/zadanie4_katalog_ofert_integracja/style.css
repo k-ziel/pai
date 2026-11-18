@@ -1,0 +1,171 @@
+/* Dark Theme - Salon Wyposażenia Office-Projekt */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #0b0f19;
+  color: #f8fafc;
+  line-height: 1.6;
+  padding: 2rem 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.aplikacja {
+  width: 100%;
+  max-width: 800px;
+  background-color: #0f172a;
+  border: 1px solid #334155;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+header {
+  border-bottom: 2px solid #1e293b;
+  padding-bottom: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+header h1 {
+  font-size: 1.4rem;
+  color: #38bdf8;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.panel-konfiguracji, .panel-katalogu {
+  background-color: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 8px;
+  padding: 1.25rem;
+}
+
+h2 {
+  font-size: 1.1rem;
+  color: #94a3b8;
+  margin-bottom: 1rem;
+}
+
+.grupa-pola {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-bottom: 1rem;
+}
+
+label {
+  font-size: 0.9rem;
+  color: #cbd5e1;
+}
+
+input[type="text"] {
+  background-color: #0f172a;
+  border: 1px solid #475569;
+  border-radius: 6px;
+  padding: 0.6rem 0.8rem;
+  color: #f8fafc;
+  font-size: 0.95rem;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  border-color: #38bdf8;
+  box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.2);
+}
+
+.btn-glowny {
+  background-color: #0284c7;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.7rem 1.4rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-glowny:hover {
+  background-color: #0369a1;
+}
+
+.siatka-kart {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.karta-oferty {
+  background-color: #0f172a;
+  border: 2px solid #334155;
+  border-radius: 8px;
+  padding: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  transition: all 0.2s ease;
+}
+
+.karta-oferty h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.2rem;
+}
+
+.karta-oferty p {
+  color: #94a3b8;
+  font-size: 0.9rem;
+  flex-grow: 1;
+}
+
+.cena-oferty {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #fbbf24;
+}
+
+.btn-wybierz {
+  background-color: #1e293b;
+  color: #cbd5e1;
+  border: 1px solid #475569;
+  border-radius: 4px;
+  padding: 0.5rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-wybierz:hover {
+  background-color: #334155;
+  color: #ffffff;
+}
+
+.karta-oferty.oferta-wybrana {
+  border-color: #10b981;
+  background-color: #064e3b22;
+  box-shadow: 0 0 15px rgba(16, 185, 129, 0.3);
+}
+
+.karta-oferty.oferta-wybrana .btn-wybierz {
+  background-color: #10b981;
+  color: #0f172a;
+  border-color: #10b981;
+}
+
+footer {
+  margin-top: 2rem;
+  border-top: 1px solid #1e293b;
+  padding-top: 1rem;
+  text-align: center;
+  color: #64748b;
+  font-size: 0.85rem;
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Print-Service — Harmonogram Zleceń</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="aplikacja">
+    <header>
+      <h1>Print-Service — Dyspozycja Zleceń Serwisowych</h1>
+    </header>
+
+    <main>
+      <section class="panel-formularza">
+        <h2>Wprowadzenie zlecenia priorytetowego</h2>
+        <div class="grupa-formularza">
+          <label for="opis-zlecenia">Opis usterki urządzenia drukującego:</label>
+          <input type="text" id="opis-zlecenia" placeholder="Wpisz opis usterki...">
+        </div>
+        <button type="button" id="btn-wstaw-ekspres" class="btn-ekspres">Wstaw zlecenie ekspresowe</button>
+      </section>
+
+      <section class="panel-kolejki">
+        <h2>Bieżąca kolejka serwisowa (kliknij wpis, aby zmienić status)</h2>
+        <ul id="kolejka-zlecen" class="kolejka-lista">
+          <li id="zlecenie-standard" class="zlecenie-standard" title="Kliknij, aby oznaczyć realizację">
+            Standard: Przegląd okresowy kserokopiarki biurowej
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <footer>
+      <p>INF.03 · PAI · XXI c.</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

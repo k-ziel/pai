@@ -28,6 +28,7 @@ function wyznaczUpustPromocyjny(kwotaNetto, kodKuponu) {
     }
 }
 
+
 function obliczKwoteDoZaplaty(netto, rabat, stawkaVat = 0.23) {
     return (netto - rabat) * (1 + stawkaVat)
 }

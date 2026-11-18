@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zadanie · Lista ocen</title>
+  <style>
+    :root {
+      --ink: #1c1915;
+      --muted: #5c564c;
+      --line: #e4ddd2;
+      --paper: #fffcf7;
+      --task: #f4efe6;
+      --accent: #8a3d12;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font: 17px/1.5 "Segoe UI", system-ui, sans-serif;
+    }
+    .sheet {
+      width: min(720px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 28px 0 64px;
+    }
+    .task {
+      background: var(--task);
+      border: 1px solid var(--line);
+      border-left: 4px solid var(--accent);
+      border-radius: 12px;
+      padding: 16px 18px 8px;
+      margin-bottom: 28px;
+    }
+    .kicker {
+      margin: 0 0 6px;
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+    h1 { margin: 0 0 10px; font-size: 28px; letter-spacing: -0.03em; }
+    h2 { margin: 22px 0 8px; font-size: 18px; }
+    p, li { margin: 0 0 8px; }
+    ol { margin: 0 0 8px; padding-left: 1.2em; }
+    .task strong { font-weight: 650; }
+    label { display: block; margin: 10px 0; }
+    input[type="text"] {
+      display: block;
+      width: min(280px, 100%);
+      margin-top: 4px;
+      padding: 8px 10px;
+      border: 1px solid #cfc6b8;
+      border-radius: 8px;
+      font: inherit;
+    }
+    button {
+      margin-top: 6px;
+      padding: 8px 14px;
+      border: 0;
+      border-radius: 8px;
+      background: var(--ink);
+      color: white;
+      font: inherit;
+      cursor: pointer;
+    }
+    button:focus-visible, input:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+    }
+    #podsumowanie { min-height: 1.5em; font-weight: 650; }
+    #lista { padding-left: 1.2em; }
+    #lista li { margin: 4px 0; }
+  </style>
+</head>
+<body>
+  <div class="sheet">
+    <section class="task">
+      <p class="kicker">Semestry 1–3 · Chrome</p>
+      <h1>Lista ocen</h1>
+      <p>Na starcie skrypt ma wypisać trzy osoby z tablicy: <strong>Ala — 5</strong>, <strong>Ola — 4</strong>, <strong>Ewa — 3</strong>. Nad listą ma być napis <strong>Liczba: 3</strong>.</p>
+      <p>Po wpisaniu imienia i oceny przycisk <strong>Dodaj</strong> dopisuje jedną pozycję i zwiększa liczbę. Konsola (F12) ma być czysta.</p>
+      <p>Lista i liczba biorą się ze skryptu. Pozycji nie dopisuj ręcznie w HTML.</p>
+      <p>W pliku jest więcej niż jeden błąd. Po każdej poprawce odśwież stronę i porównaj ją z poleceniem. Przy każdym błędzie zapisz:</p>
+      <ol>
+        <li>objaw po odświeżeniu,</li>
+        <li>miejsce w kodzie,</li>
+        <li>przyczynę,</li>
+        <li>poprawkę,</li>
+        <li>skąd wiesz, że ta poprawka jest dobra.</li>
+      </ol>
+    </section>
+
+    <h2>Lista ocen</h2>
+    <p id="podsumowanie"></p>
+    <ul id="lista"></ul>
+    <form>
+      <label>Imię <input id="imie" type="text" autocomplete="off"></label>
+      <label>Ocena <input id="ocena" type="text" autocomplete="off"></label>
+      <button id="dodaj" type="button">Dodaj</button>
+    </form>
+  </div>
+
+  <script>
+    
+    const uczniowie = [
+      { imie: "Ala", ocena: 5 },
+      { imie: "Ola", ocena: 4 },
+      { imie: "Ewa", ocena: 3 }
+    ];
+
+    const lista = document.getElementById("lista");
+    const podsumowanie = document.getElementById("podsumowanie");
+    const przycisk = document.getElementById("dodaj");
+
+    
+    function wypisz() {
+      if (uczniowie.length > 0) {
+        podsumowanie.textContent = "Liczba: " + uczniowie.length;
+        lista.textContent = "";
+        for (let i = 0; i <= uczniowie.length - 1; i++) {
+          const osoba = uczniowie[i];
+          const li = document.createElement("li");
+          li.textContent = osoba.imie + " — " + osoba.ocena;
+          lista.appendChild(li);
+        }
+      }
+    }
+
+    function dodaj() {
+      const imie = document.getElementById("imie").value;
+      const ocena = document.getElementById("ocena").value;
+      let ile = uczniowie.length;
+      ile = ile + 1;
+
+      const pozycje = document.getElementById("lista");
+      pozycje.appendChild("<li>" + imie + " — " + ocena + "</li>");
+
+      uczniowie.push({ imie: imie, ocena: ocena });
+      podsumowanie.textContent = "Liczba: " + uczniowie.length;
+    }
+
+    wypisz();
+    przycisk.addEventListener("click", dodaj);
+  </script>
+</body>
+</html>
