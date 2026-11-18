@@ -10,6 +10,20 @@ zlecenieStandard.addEventListener('click', () => {
 });
 
 btnWstawEkspres.addEventListener('click', () => {
+  tekst = inputOpis.value.trim()
+  if(tekst == '') {
+    tekst = "Ekspres: Wymiana modułu bębna światłoczułego"
+  }
+  li = document.createElement('li')
+  li.textContent = tekst
+  li.classList.add('zlecenie-ekspres')
+  li.title = "Kliknij, aby oznaczyć realizację"
+  li.addEventListener("click", function() {
+    this.classList.toggle('zrealizowane')
+  })
+  kolejkaZlecen.insertBefore(li, zlecenieStandard)
+
+
   // Twoje rozwiazanie:
   // KROK 1: Pobierz tekst z inputOpis z metodą trim().
   //         Jeśli pusty, użyj: "Ekspres: Wymiana modułu bębna światłoczułego"

@@ -21,6 +21,29 @@ function aktualizujPodsumowanie() {
 
 // 1. Dodawanie pojedynczej pozycji
 btnDodaj.addEventListener('click', () => {
+
+  nazwa = inputNazwa.value.trim()
+  if(nazwa = '') {
+    nazwa = "Diagnostyka i audyt bezpieczeństwa sieci LAN"
+  }
+  koszt = parseFloat(inputKoszt.value.trim())
+  if(isNaN(koszt)) {
+    koszt = 1450
+  }
+
+  li = document.createElement("li")
+  li.classList.add(pozycja-uslugi)
+  li.dataset.koszt = koszt
+
+  span1 = document.createElement('span')
+  span1.classList.add("nazwa")
+  span1.textContent = nazwa
+
+  span2 = document.createElement('span')
+  span2.classList.add("koszt-wartosc")
+  span2.textContent = `Koszt: ${koszt.toFixed(2)} PLN`
+
+
   // Twoje rozwiazanie:
   // KROK 1: Pobierz nazwę usługi i koszt (parseFloat).
   //         Jeśli puste/błędne, użyj domyślnych: nazwa: "Diagnostyka i audyt bezpieczeństwa sieci LAN", koszt: 1450

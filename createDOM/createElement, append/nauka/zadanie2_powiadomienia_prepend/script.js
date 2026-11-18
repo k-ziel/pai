@@ -5,13 +5,28 @@ const panelAlertow = document.querySelector('#panel-alertow');
 
 btnWyslij.addEventListener('click', () => {
 
-  tresc = inputTresc.trim()
-  if(tresc = '') {
+  tresc = inputTresc.value.trim()
+  if(tresc == '') {
     tresc = "Nowy alert logistyczny: Opóźnienie na trasie tranzytowej S8"
   }
-  element = document.createElement('div')
-  element.classList.add('karta-alertu')
-  element.dataset.kod = "ALERT-2026"
+  alertDiv = document.createElement('div')
+  alertDiv.classList.add('karta-alertu')
+  alertDiv.dataset.kod = "ALERT-2026"
+
+  span = document.createElement('span')
+  span.classList.add('etykieta-priorytet')
+  span.textContent = "PILNE"
+
+  p = document.createElement('p')
+  p.textContent = tresc
+
+
+  alertDiv.append(span, p)
+  panelAlertow.prepend(alertDiv)
+
+  inputTresc.value = ''
+  inputTresc.focus()
+
   
 
   // Twoje rozwiazanie:
